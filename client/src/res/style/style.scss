@@ -1,0 +1,250 @@
+.recipe-grid {
+  margin-top: 100px;
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Responsive columns */
+  gap: 20px; /* Spacing between cards */
+  padding: 20px;
+}
+
+.recipe-card {
+  position: relative; /* Set relative positioning for the card */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.recipe-card img {
+  width: 300px;
+  height: 300px;
+  display: block;
+}
+
+.recipe-card-content {
+  padding: 15px;
+  padding-bottom: 50px; /* Ensure padding at bottom for button visibility */
+}
+
+.recipe-card-content h2 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+
+.recipe-card-content p {
+  margin: 5px 0;
+}
+
+.recipe-card-content a {
+  color: #009688;
+  text-decoration: none;
+}
+
+.recipe-card-content a:hover {
+  text-decoration: underline;
+}
+
+.save-btn {
+  position: absolute; /* Absolute positioning */
+  bottom: 10px; /* Space from bottom */
+  right: 10px; /* Space from right */
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #009688;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #00796b;
+}
+
+.saved-recipes-container {
+  margin-top: 10px;
+  padding: 20px;
+  height: 100vh; /* Set the container to full viewport height */
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.saved-recipes-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px; /* Gap between cards */
+}
+
+.saved-recipe-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding-bottom: 20px;
+  position: relative; /* Allows positioning of the delete button */
+}
+
+.saved-recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.saved-recipe-card-title,
+.saved-recipe-card-time,
+.saved-recipe-card-serving,
+.saved-recipe-card-rating,
+.saved-recipe-card-link {
+  margin: 5px 20px;
+}
+
+.saved-recipe-card-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.saved-recipe-card-link:hover {
+  text-decoration: underline;
+}
+
+.delete-btn {
+  position: absolute; /* Positioned relative to the card */
+  top: 10px;
+  right: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #cc0000;
+}
+
+.main-content {
+  margin-left: 300px;
+  padding: 10px;
+}
+
+.custom-navbar {
+  background-color: #28a745;
+}
+
+.custom-navbar .navbar-brand {
+  color: #fff !important;
+  font-size: 2rem;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+  background-color: #218838;
+}
+
+.user-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .user-icon {
+    width: 100px;
+    padding: 10px;
+  }
+}
+
+.user-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  color: #333 !important;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  background-color: #6ec187;
+  color: #ffffff !important;
+
+  .sidebar-icon {
+    color: #ffffff !important;
+  }
+}
+
+.sidebar-icon {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and larger screens */
+@media (min-width: 600px) {
+  .saved-recipes-card-container {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(200px, 1fr)
+    ); /* Adjust card width for medium screens */
+  }
+}
+
+/* For desktops */
+@media (min-width: 900px) {
+  .saved-recipes-card-container {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(250px, 1fr)
+    ); /* Adjust card width for large screens */
+  }
+}
+
+.saved-recipe-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+.saved-recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.saved-recipe-card-title,
+.saved-recipe-card-time,
+.saved-recipe-card-serving,
+.saved-recipe-card-rating,
+.saved-recipe-card-link {
+  margin: 5px 20px;
+}
+
+.saved-recipe-card-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.saved-recipe-card-link:hover {
+  text-decoration: underline;
+}
