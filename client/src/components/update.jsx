@@ -54,6 +54,7 @@ const UpdateUserInfo = () => {
       if (response.ok) {
         setMessage(result.message || "Information updated successfully.");
         setError("");
+        window.location.reload();
       } else {
         setError(result.error || "Failed to update information.");
         setMessage("");
@@ -87,7 +88,7 @@ const UpdateUserInfo = () => {
                     className="form-control"
                     placeholder="Please enter your name"
                     value={name}
-                    onChange={setName}
+                    onChange={(e) => setName(e.target.value)}
                     required
                   />
                 </div>
@@ -101,7 +102,7 @@ const UpdateUserInfo = () => {
                     className="form-control"
                     placeholder="Please enter your e-mail"
                     value={email}
-                    onChange={setEmail}
+                    onChange={(e) => setEmail(e.target.value)}
                     required
                   />
                 </div>
@@ -115,7 +116,7 @@ const UpdateUserInfo = () => {
                     className="form-control"
                     placeholder="Please enter your password"
                     value={password}
-                    onChange={setPassword}
+                    onChange={(e) => setPassword(e.target.value)}
                     required
                   />
                 </div>
@@ -130,7 +131,7 @@ const UpdateUserInfo = () => {
                     className="form-control"
                     placeholder="Please confirm your password"
                     value={confirmPassword}
-                    onChange={setConfirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                     required
                   />
                 </div>

@@ -141,7 +141,7 @@ def updateUserInfo():
     except Exception as e:
         return jsonify({"error": "An error occurred", "details": str(e)}), 500
 
-@app.route('/popular-recipes-testmode')
+@app.route('/popular-recipes')
 def getPopularRecipes():
     url = os.environ.get("X-RAPIDAPI-URL")
 

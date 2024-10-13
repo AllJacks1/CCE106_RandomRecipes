@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../res/style/style.scss";
 import Modal from "react-modal";
+import SignIn from "./sign-in";
+import SignUp from "./sign-up";
 
 const customStyles = {
   content: {
@@ -159,7 +161,7 @@ const Feed = () => {
         style={customStyles}
         contentLabel="Login Modal"
       >
-        <Login />
+        <SignIn />
         <div className="login-image">
           <figure>
             <img src="images/login-image.jpg" alt="login image" />
